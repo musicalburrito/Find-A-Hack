@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "343347920884",
+    "firebase_url": "https://find-a-hack.firebaseio.com",
+    "project_id": "find-a-hack",
+    "storage_bucket": "find-a-hack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343347920884:android:a6b353abeb149adc",
+        "android_client_info": {
+          "package_name": "com.sample.project.find_a_hack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343347920884-nvbn713vh4h8ktafu77764qlt2tgs5nd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sample.project.find_a_hack",
+            "certificate_hash": "826d18819c13e56acac5d591f7f8b2d40f3f32db"
+          }
+        },
+        {
+          "client_id": "343347920884-o69u7et4dro90qoi787eisrf5j1b229t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBab2pMhzroBk2tONzXA6Q7F-2A4vG4OWc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343347920884-o69u7et4dro90qoi787eisrf5j1b229t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
