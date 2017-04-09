@@ -44,7 +44,8 @@ public class DiscoverActivity extends AppCompatActivity {
 //                    titles.add(child.getKey());
 //                    descl.add(child.getValue(String.class));
 //                    if(child != null && child.getKey() != null) {
-                        Log.d("this isn't null", child.getKey());
+                        Log.d("title", child.getKey());
+                        Log.d("desc", child.getValue(String.class));
 //                        TextView title = (TextView) findViewById(R.id.projname);
 //                        title.setText(child.getKey());
 //                        TextView desc = (TextView) findViewById(R.id.projdesc);
