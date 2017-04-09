@@ -8,7 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
-
+import android.view.ViewGroup;
+import android.view.View;
 import java.lang.String;
 
 import com.google.firebase.database.ChildEventListener;
@@ -37,13 +38,16 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 /* sets text data variable and stores it into database upon button click.
                  changed type to string to make it easier to debug can store any class. */
                 EditText textData;
                 textData = (EditText) findViewById(R.id.editText);
-                myRef.push().setValue(textData.getText().toString());
+                String username = textData.getText().toString();
                 Intent nextWindow = new Intent(v.getContext(), LanguagesActivity.class);
+                nextWindow.putExtra("EXTRA_USERNAME", username);
                 startActivity(nextWindow);
+
             }
         });
 

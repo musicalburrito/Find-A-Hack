@@ -15,7 +15,70 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="35sp"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:text="Web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
+        android:id="@+id/Web" />
+
+    <RadioButton
+        android:text="iOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Web"
+        android:layout_alignLeft="@+id/Web"
+        android:layout_alignStart="@+id/Web"
+        android:layout_marginTop="20dp"
+        android:id="@+id/iOS" />
+
+    <RadioButton
+        android:text="Android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Android"
+        android:layout_below="@+id/iOS"
+        android:layout_alignLeft="@+id/iOS"
+        android:layout_alignStart="@+id/iOS" />
+
+    <RadioButton
+        android:text="Hardware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Android"
+        android:layout_alignLeft="@+id/Android"
+        android:layout_alignStart="@+id/Android"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Hardware" />
+
+    <RadioButton
+        android:text="Games/VR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Hardware"
+        android:layout_alignLeft="@+id/Hardware"
+        android:layout_alignStart="@+id/Hardware"
+        android:layout_marginTop="20dp"
+        android:id="@+id/GameVR" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/GameVR"
+        android:layout_alignRight="@+id/GameVR"
+        android:layout_alignEnd="@+id/GameVR"
+        android:layout_marginTop="35dp"
+        android:id="@+id/next2" />
 </RelativeLayout>
