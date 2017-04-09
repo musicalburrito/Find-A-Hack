@@ -31,6 +31,10 @@ public class DiscoverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discover);
+//        TextView title = (TextView) findViewById(R.id.projectTitle);
+//        title.setText("project a");
+//        TextView desc = (TextView) findViewById(R.id.description);
+//        desc.setText("description1");
 //        ArrayList<String> titles = new ArrayList<String>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
 //            for(DataSnapshot child: dataSnapshot.getChildren()){
@@ -41,16 +45,17 @@ public class DiscoverActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot child: dataSnapshot.getChildren()) {
-//                    titles.add(child.getKey());
-//                    descl.add(child.getValue(String.class));
+                    titles.add(child.getKey());
+                    descl.add(child.getValue(String.class));
 //                    if(child != null && child.getKey() != null) {
-                        Log.d("title", child.getKey());
-                        Log.d("desc", child.getValue(String.class));
-//                        TextView title = (TextView) findViewById(R.id.projname);
-//                        title.setText(child.getKey());
-//                        TextView desc = (TextView) findViewById(R.id.projdesc);
-//                        desc.setText(child.getValue(String.class));
-//                    Log.d("this is a key ", "haha " + descl.get(0));
+//                        Log.d("title", child.getKey());
+//                        Log.d("desc", child.getValue(String.class));
+                    TextView title = (TextView) findViewById(R.id.projectTitle);
+                    title.setText(child.getKey());
+                    TextView desc = (TextView) findViewById(R.id.description);
+                    desc.setText(child.getValue(String.class));
+
+//                        Log.d("this is a key ", "haha " + descl.get(0));
 //                    }
                 }
             }
@@ -62,9 +67,9 @@ public class DiscoverActivity extends AppCompatActivity {
         });
 
 //        Log.d("size of title", "val " + titles.size());
-//        TextView title = (TextView) findViewById(R.id.projname);
+//        TextView title = (TextView) findViewById(R.id.projectTitle);
 //        title.setText(titles.get(0));
-//        TextView desc = (TextView) findViewById(R.id.projdesc);
+//        TextView desc = (TextView) findViewById(R.id.description);
 //        desc.setText(descl.get(0));
 
         Button yes = (Button) findViewById(R.id.select);
@@ -74,8 +79,8 @@ public class DiscoverActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Log.d("success", "notify project leader of match");
-//                Intent nextWindow = new Intent(v.getContext(), DiscoverActivity.class);
-//                startActivity(nextWindow);
+                Intent nextWindow = new Intent(v.getContext(), StartActivity.class);
+                startActivity(nextWindow);
             }
         });
 
@@ -83,11 +88,13 @@ public class DiscoverActivity extends AppCompatActivity {
 //            int counter = 1;
             @Override
             public void onClick(View v){
-                TextView title = (TextView) findViewById(R.id.projname);
-                title.setText(titles.get(counter));
-                TextView desc = (TextView) findViewById(R.id.projdesc);
-                desc.setText(descl.get(counter));
-                ++counter;
+                TextView title = (TextView) findViewById(R.id.projectTitle);
+                title.setText("project2");
+//                title.setText(titles.get(counter));
+                TextView desc = (TextView) findViewById(R.id.description);
+                desc.setText("description2");
+//                desc.setText(descl.get(counter));
+//                ++counter;
 //                Intent nextWindow = new Intent(v.getContext(), DiscoverActivity.class);
 //                startActivity(nextWindow);
             }
