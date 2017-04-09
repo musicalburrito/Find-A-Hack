@@ -20,14 +20,15 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(nextWindow);
             }
         });
-//        Button discover;
-//        discover = (Button) findViewById(R.id.discover);
-//        discover.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//
-//            }
-//        });
+        Button discover;
+        discover = (Button) findViewById(R.id.discover);
+        discover.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent nextWindow = new Intent(v.getContext(), DiscoverActivity.class);
+                startActivity(nextWindow);
+            }
+        });
 //        Button requests;
 //        requests = (Button) findViewById(R.id.requests);
 //        requests.setOnClickListener(new View.OnClickListener(){
